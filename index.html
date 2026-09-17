@@ -3,364 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#6f5138">
 
 <title>Selamat Ulang Tahun, Bapak ❤️</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    margin: 0;
-    background: #f5eee5;
-    color: #5c4635;
-    font-family: Arial, sans-serif;
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    color:#5d4736;
+    background:#f6efe6;
 }
 
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-    background:
-        radial-gradient(circle at top left, #fffaf3, transparent 40%),
-        radial-gradient(circle at bottom right, #dfc8ad, transparent 35%),
-        #f5eee5;
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
 }
 
-.card {
-    width: 100%;
-    max-width: 1000px;
-    background: rgba(255, 250, 243, 0.92);
-    border-radius: 28px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: 0 20px 60px rgba(70, 45, 25, 0.15);
+.card{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#fffaf4;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(70,45,25,.15);
 }
 
-.hero-photo {
-    min-height: 650px;
-    overflow: hidden;
-    background: #d9c5ad;
+.hero-img{
+    min-height:650px;
 }
 
-.hero-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.hero-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-.hero-text {
-    padding: 65px 55px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.hero-text{
+    padding:60px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.small-title {
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #9a7554;
-    margin-bottom: 20px;
+.small{
+    color:#9a7656;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:20px;
 }
 
-h1 {
-    font-family: Georgia, serif;
-    font-size: clamp(50px, 7vw, 85px);
-    line-height: 0.9;
-    font-weight: normal;
-    margin: 0 0 25px;
+h1,h2{
+    font-family:Georgia,serif;
+    font-weight:normal;
 }
 
-h1 span {
-    display: block;
-    font-size: 0.55em;
-    line-height: 1.3;
+h1{
+    font-size:clamp(50px,7vw,85px);
+    line-height:.9;
+    margin:0 0 25px;
 }
 
-.intro {
-    line-height: 1.9;
-    color: #796856;
-    font-size: 15px;
+h1 span{
+    display:block;
+    font-size:.55em;
+    line-height:1.3;
 }
 
-.button {
-    display: inline-block;
-    width: fit-content;
-    border: none;
-    padding: 14px 22px;
-    margin-top: 25px;
-    border-radius: 30px;
-    background: #634936;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
+p{
+    line-height:1.8;
 }
 
-.button:hover {
-    transform: translateY(-3px);
-    background: #4f3929;
+.intro{
+    color:#7d6b5b;
 }
 
-/* =========================
-   MUSIC
-========================= */
-
-.music-box {
-    margin-top: 18px;
-    font-size: 12px;
-    color: #927b65;
+.btn{
+    display:inline-block;
+    width:max-content;
+    margin-top:20px;
+    padding:14px 22px;
+    background:#654b37;
+    color:white;
+    border:none;
+    border-radius:30px;
+    text-decoration:none;
+    cursor:pointer;
 }
 
-.music-button {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 100;
-    
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: none;
-    
-    background: #634936;
-    color: white;
-    
-    font-size: 20px;
-    cursor: pointer;
-    
-    box-shadow: 0 8px 25px rgba(60, 40, 25, 0.3);
+section{
+    padding:90px 20px;
 }
 
-.music-button.playing {
-    animation: pulse 1.5s infinite;
+.container{
+    max-width:950px;
+    margin:auto;
 }
 
-@keyframes pulse {
-    50% {
-        transform: scale(1.08);
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    font-size:55px;
+    margin:10px 0;
+}
+
+.title p{
+    color:#897867;
+}
+
+.letter{
+    max-width:750px;
+    margin:auto;
+    background:#fffaf4;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(70,45,25,.10);
+}
+
+.letter p{
+    font-family:Georgia,serif;
+    font-size:20px;
+}
+
+.signature{
+    text-align:right;
+    margin-top:30px;
+    color:#947b65;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.photo{
+    aspect-ratio:1/1;
+    overflow:hidden;
+    border-radius:20px;
+    background:#ddd;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.photo:first-child{
+    grid-column:span 2;
+    aspect-ratio:16/9;
+}
+
+.closing{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.closing h2{
+    font-size:70px;
+    line-height:1;
+}
+
+.closing p{
+    max-width:600px;
+    color:#897867;
+    margin:auto;
+}
+
+.music{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:99;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#654b37;
+    color:white;
+
+    font-size:20px;
+    cursor:pointer;
+
+    box-shadow:0 8px 25px rgba(50,35,20,.3);
+}
+
+.music.playing{
+    animation:berdenyut 1.4s infinite;
+}
+
+@keyframes berdenyut{
+    50%{
+        transform:scale(1.08);
     }
 }
 
-/* =========================
-   SECTION
-========================= */
+@media(max-width:750px){
 
-section {
-    padding: 100px 20px;
-}
-
-.container {
-    width: 100%;
-    max-width: 950px;
-    margin: auto;
-}
-
-.heading {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.heading small {
-    color: #9a7554;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 11px;
-}
-
-.heading h2 {
-    font-family: Georgia, serif;
-    font-weight: normal;
-    font-size: clamp(38px, 6vw, 60px);
-    margin: 12px 0;
-}
-
-.heading p {
-    color: #8b7866;
-}
-
-/* =========================
-   LETTER
-========================= */
-
-.letter {
-    max-width: 750px;
-    margin: auto;
-    background: #fffaf3;
-    padding: 50px;
-    border-radius: 25px;
-    box-shadow: 0 15px 45px rgba(70, 45, 25, 0.1);
-}
-
-.letter p {
-    font-family: Georgia, serif;
-    font-size: 21px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.signature {
-    text-align: right;
-    margin-top: 35px;
-    color: #927b65;
-}
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.photo {
-    border-radius: 20px;
-    overflow: hidden;
-    background: #ddd;
-    aspect-ratio: 1 / 1;
-    box-shadow: 0 12px 35px rgba(70, 45, 25, 0.12);
-}
-
-.photo.large {
-    grid-column: span 2;
-    aspect-ratio: 16 / 9;
-}
-
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* =========================
-   CLOSING
-========================= */
-
-.closing {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.closing h2 {
-    font-family: Georgia, serif;
-    font-size: clamp(45px, 8vw, 80px);
-    font-weight: normal;
-    line-height: 1;
-}
-
-.closing p {
-    color: #8b7866;
-    line-height: 1.9;
-    max-width: 600px;
-    margin: auto;
-}
-
-.heart {
-    display: block;
-    font-size: 35px;
-    margin-top: 25px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 750px) {
-
-    .card {
-        grid-template-columns: 1fr;
+    .card{
+        grid-template-columns:1fr;
     }
 
-    .hero-photo {
-        min-height: 450px;
+    .hero-img{
+        min-height:450px;
     }
 
-    .hero-text {
-        padding: 45px 28px;
+    .hero-text{
+        padding:40px 28px;
     }
 
-    h1 {
-        font-size: 60px;
+    .gallery{
+        gap:10px;
     }
 
-    section {
-        padding: 70px 17px;
+    .letter{
+        padding:30px 22px;
     }
 
-    .letter {
-        padding: 35px 25px;
-    }
-
-    .letter p {
-        font-size: 19px;
-    }
-
-    .gallery {
-        gap: 10px;
-    }
-
-    .photo.large {
-        grid-column: span 2;
+    .closing h2{
+        font-size:48px;
     }
 }
 </style>
 </head>
 
-
 <body>
 
-<!-- =========================
-     MUSIK
-========================= -->
+<!-- MUSIK -->
+<audio id="musik" src="assets/lagu.mp3" loop preload="auto"></audio>
 
-<audio id="music" loop preload="auto"></audio>
-
-<button class="music-button" id="musicButton">
-    ▶
-</button>
+<button class="music" id="musicButton">▶</button>
 
 
-<!-- =========================
-     HALAMAN DEPAN
-========================= -->
-
+<!-- HALAMAN DEPAN -->
 <section class="hero">
 
     <div class="card">
 
-        <div class="hero-photo">
-            <img
-                id="foto1"
-                src="foto%201.jpeg"
-                alt="Foto Bapak">
+        <div class="hero-img">
+            <img src="assets/foto1.jpeg" alt="Foto Bapak">
         </div>
-
 
         <div class="hero-text">
 
-            <div class="small-title">
+            <div class="small">
                 17 September · Hari Ulang Tahun Bapak
             </div>
 
@@ -372,17 +282,13 @@ section {
             <p class="intro">
                 Hari ini adalah hari spesial untuk seseorang
                 yang begitu berarti dalam hidupku.
-                Tidak banyak kata yang bisa membalas semua
-                perjuangan dan kasih sayang Bapak.
+                Terima kasih untuk semua perjuangan,
+                kasih sayang, dan pengorbanan Bapak.
             </p>
 
-            <a href="#pesan" class="button">
+            <a href="#pesan" class="btn">
                 Buka pesan untuk Bapak
             </a>
-
-            <div class="music-box">
-                🎵 Lagu untuk menemani halaman ini
-            </div>
 
         </div>
 
@@ -391,24 +297,23 @@ section {
 </section>
 
 
-<!-- =========================
-     PESAN
-========================= -->
-
+<!-- PESAN -->
 <section id="pesan">
 
     <div class="container">
 
-        <div class="heading">
+        <div class="title">
 
-            <small>Untuk Bapak</small>
+            <div class="small">
+                Untuk Bapak
+            </div>
 
             <h2>
                 Sedikit dari hati
             </h2>
 
             <p>
-                Ada beberapa hal yang mungkin lebih mudah
+                Ada hal-hal yang terkadang lebih mudah
                 dituliskan daripada diucapkan.
             </p>
 
@@ -437,8 +342,8 @@ section {
             </p>
 
             <p>
-                Aku melihatnya, aku mengingatnya, dan aku
-                sangat menghargainya.
+                Aku melihatnya, aku mengingatnya,
+                dan aku sangat menghargainya.
             </p>
 
             <p>
@@ -450,8 +355,8 @@ section {
 
             <p>
                 Semoga hari-hari Bapak ke depan dipenuhi
-                dengan hal-hal baik yang selama ini Bapak
-                perjuangkan.
+                dengan hal-hal baik yang selama ini
+                Bapak perjuangkan.
             </p>
 
             <p>
@@ -471,25 +376,23 @@ section {
 </section>
 
 
-<!-- =========================
-     GALERI 5 FOTO
-========================= -->
-
+<!-- GALERI -->
 <section>
 
     <div class="container">
 
-        <div class="heading">
+        <div class="title">
 
-            <small>Beberapa kenangan</small>
+            <div class="small">
+                Beberapa kenangan
+            </div>
 
             <h2>
                 Tentang Bapak & keluarga
             </h2>
 
             <p>
-                Lima foto, lima kenangan,
-                dan begitu banyak cerita.
+                Kenangan sederhana yang selalu berarti.
             </p>
 
         </div>
@@ -497,43 +400,20 @@ section {
 
         <div class="gallery">
 
-            <div class="photo large">
-                <img
-                    id="foto2"
-                    src="foto%202.jpeg"
-                    alt="Foto kenangan 1">
+            <div class="photo">
+                <img src="assets/foto1.jpeg" alt="Foto 1">
             </div>
 
-
             <div class="photo">
-                <img
-                    id="foto3"
-                    src="foto%203.jpeg"
-                    alt="Foto kenangan 2">
+                <img src="assets/foto2.jpeg" alt="Foto 2">
             </div>
 
-
             <div class="photo">
-                <img
-                    id="foto4"
-                    src="foto%204.jpeg"
-                    alt="Foto kenangan 3">
+                <img src="assets/foto3.jpeg" alt="Foto 3">
             </div>
 
-
             <div class="photo">
-                <img
-                    id="foto5"
-                    src="foto%205.jpeg"
-                    alt="Foto kenangan 4">
-            </div>
-
-
-            <div class="photo">
-                <img
-                    id="foto6"
-                    src="foto%201.jpeg"
-                    alt="Foto kenangan 5">
+                <img src="assets/foto4.jpeg" alt="Foto 4">
             </div>
 
         </div>
@@ -543,20 +423,13 @@ section {
 </section>
 
 
-<!-- =========================
-     PENUTUP
-========================= -->
-
+<!-- PENUTUP -->
 <section class="closing">
 
     <div>
 
-        <div class="heading">
-
-            <small>
-                17 September · Hari untuk Bapak
-            </small>
-
+        <div class="small">
+            17 September · Hari untuk Bapak
         </div>
 
         <h2>
@@ -566,14 +439,14 @@ section {
 
         <p>
             Selamat ulang tahun, Pak.
-            Semoga langkah Bapak selalu dimudahkan,
-            hati selalu tenang, badan selalu sehat,
-            dan keluarga selalu menjadi alasan untuk pulang.
+            Semoga selalu sehat, panjang umur,
+            bahagia, dan selalu dikelilingi orang-orang
+            yang menyayangi Bapak.
         </p>
 
-        <span class="heart">
+        <div style="font-size:35px;margin-top:25px;">
             ♡
-        </span>
+        </div>
 
     </div>
 
@@ -582,178 +455,80 @@ section {
 
 <script>
 
-/* =====================================================
-   SISTEM FOTO
-   Mencoba beberapa kemungkinan nama file.
-   Jadi kalau foto menggunakan .jpg atau .jpeg,
-   website tetap mencoba menemukannya.
-===================================================== */
-
-function cariFoto(id, nomor) {
-
-    const gambar = document.getElementById(id);
-
-    const kemungkinan = [
-        "foto%20" + nomor + ".jpeg",
-        "foto%20" + nomor + ".jpg",
-        "foto%20" + nomor + ".png",
-        "foto" + nomor + ".jpeg",
-        "foto" + nomor + ".jpg",
-        "foto" + nomor + ".png"
-    ];
-
-    let index = 0;
-
-    gambar.onerror = function() {
-
-        index++;
-
-        if (index < kemungkinan.length) {
-            gambar.src = kemungkinan[index];
-        }
-
-    };
-
-    gambar.src = kemungkinan[0];
-}
+const musik = document.getElementById("musik");
+const tombol = document.getElementById("musicButton");
 
 
-/* FOTO 1 - 5 */
+// Fungsi memutar musik
+function putarMusik(){
 
-cariFoto("foto1", 1);
-cariFoto("foto2", 2);
-cariFoto("foto3", 3);
-cariFoto("foto4", 4);
-cariFoto("foto5", 5);
+    musik.play().then(function(){
 
-/* FOTO TERAKHIR MENGGUNAKAN FOTO 1 */
+        tombol.innerHTML = "❚❚";
+        tombol.classList.add("playing");
 
-document.getElementById("foto6").src = "foto%201.jpeg";
+    }).catch(function(){
 
+        tombol.innerHTML = "▶";
 
-/* =====================================================
-   MUSIK
-===================================================== */
-
-const music = document.getElementById("music");
-const musicButton = document.getElementById("musicButton");
-
-const daftarMusik = [
-    "Yang%20Terbaik%20Bagimu%20-%20Ada%20Band%20%28Lirik%29.mp3",
-    "lagu.mp3",
-    "musik.mp3"
-];
-
-let musikIndex = 0;
-
-
-/* Mencoba file musik */
-
-function cobaMusik() {
-
-    music.src = daftarMusik[musikIndex];
-
-    music.load();
-
-}
-
-cobaMusik();
-
-
-music.addEventListener("error", function() {
-
-    musikIndex++;
-
-    if (musikIndex < daftarMusik.length) {
-        cobaMusik();
-    }
-
-});
-
-
-/* =====================================================
-   TOMBOL MUSIK
-===================================================== */
-
-async function putarMusik() {
-
-    try {
-
-        await music.play();
-
-        musicButton.innerHTML = "❚❚";
-        musicButton.classList.add("playing");
-
-    } catch (error) {
-
-        alert(
-            "Browser memblokir musik otomatis. " +
-            "Silakan tekan tombol musik sekali lagi."
-        );
-
-    }
+    });
 
 }
 
 
-function berhentiMusik() {
+// Fungsi menghentikan musik
+function hentikanMusik(){
 
-    music.pause();
+    musik.pause();
 
-    musicButton.innerHTML = "▶";
-
-    musicButton.classList.remove("playing");
+    tombol.innerHTML = "▶";
+    tombol.classList.remove("playing");
 
 }
 
 
-musicButton.addEventListener("click", function() {
+// Tombol musik
+tombol.addEventListener("click", function(){
 
-    if (music.paused) {
+    if(musik.paused){
 
         putarMusik();
 
-    } else {
+    }else{
 
-        berhentiMusik();
+        hentikanMusik();
 
     }
 
 });
 
 
-/* =====================================================
-   AUTOPLAY
-   Browser akan mencoba memainkan musik.
-===================================================== */
+// Coba autoplay ketika halaman dibuka
+window.addEventListener("load", function(){
 
-window.addEventListener("load", function() {
+    setTimeout(function(){
 
-    setTimeout(function() {
+        putarMusik();
 
-        music.play()
-            .then(function() {
-
-                musicButton.innerHTML = "❚❚";
-                musicButton.classList.add("playing");
-
-            })
-            .catch(function() {
-
-                /*
-                Chrome/Edge/HP sering memblokir
-                autoplay dengan suara.
-
-                Kalau diblokir, tombol musik tetap tersedia.
-                */
-
-                musicButton.innerHTML = "▶";
-
-            });
-
-    }, 800);
+    },800);
 
 });
+
+
+// Kalau autoplay diblokir browser,
+// musik dicoba lagi ketika user pertama kali
+// menyentuh / klik halaman.
+
+document.addEventListener("click", function(){
+
+    if(musik.paused){
+
+        putarMusik();
+
+    }
+
+},{once:true});
+
 
 </script>
 
